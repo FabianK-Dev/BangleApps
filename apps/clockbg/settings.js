@@ -207,11 +207,12 @@
       },
       /*LANG*/"Blobs" : function() {
         var cols = [ // 2/4/8/16 (8/16 both use 4bpp)
-          [g.theme.bg,"#f9f","#90f",g.theme.fg],
-          [g.theme.bg,"#ff0","#f00",g.theme.fg],
-          [g.theme.bg,"#09f","#bef",g.theme.fg],
-          ["#000","#444","#888","#fff"],
-          ["#fff","#444","#888","#000"]
+          ["#fff","#f9f","#90f","#40f"],
+          ["#fff","#ff0","#f00","#800"],
+          ["#fff","#8ff","#08f","#00f"],
+          ["#f00","#f60","#fc0","#ff0"],
+          ["#0f0","#0f6","#0fc","#0ff"],
+          ["#00f","#26f","#4cf","#6ff"]
           // Please add some more!
         ];
         var menu =  {"":{title:/*LANG*/"Colors", back:showModeMenu},
