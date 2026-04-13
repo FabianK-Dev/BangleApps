@@ -1,0 +1,15 @@
+{ "id": "sleeptracker",
+  "name": "Sleep Tracker",
+  "shortName":"Sleep Tracker",
+  "version":"0.01",
+  "author": "FabianK-Dev",
+  "description": "A detailed description of my great app",
+  "icon": "app.png",
+  "tags": "",
+  "supports" : ["BANGLEJS2"],
+  "readme": "README.md",
+  "storage": [
+    {"name":"sleeptracker.app.js","url":"app.js"},
+    {"name":"sleeptracker.img","url":"app-icon.js","evaluate":true}
+  ]
+}
