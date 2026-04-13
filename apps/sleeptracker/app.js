@@ -41,28 +41,7 @@ function getSleepData() {
     rawData.push({ time: (data.hr * 60) + data.min, s: state });
   });
 
-  return rawData; //filterMinSleep(rawData);
-}
-
-// Löscht "Fake-Schlaf", der kürzer als 3 Blöcke (< 30 Min) ist
-function filterMinSleep(data) {
-  let seqLen = 0;
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].s >= S.LIGHT) {
-      seqLen++; // Ist eine Schlafphase
-    } else {
-      // Phase unterbrochen! War sie zu kurz?
-      if (seqLen > 0 && seqLen < 3) {
-        for (let j = i - seqLen; j < i; j++) data[j].s = S.AWAKE;
-      }
-      seqLen = 0;
-    }
-  }
-  // Ende des Arrays prüfen
-  if (seqLen > 0 && seqLen < 3) {
-    for (let j = data.length - seqLen; j < data.length; j++) data[j].s = S.AWAKE;
-  }
-  return data;
+  return rawData;
 }
 
 // Zeichnet den Verlauf auf das Display
