@@ -7,7 +7,7 @@ WIDGETS["wdclk"]={area:"tl",width:Bangle.CLOCK?0:52/* g.stringWidth("00:00") */,
     return setTimeout(Bangle.drawWidgets,1); // widget changed size - redraw
   }
   if (!this.width) return; // if not visible, return
-g.reset().setFontCustom(atob("AAAAAAAAAAIAAAQCAQAAAd0BgMBdwAAAAAAAdwAB0RiMRcAAAERiMRdwAcAQCAQdwAcERiMRBwAd0RiMRBwAAEAgEAdwAd0RiMRdwAcERiMRdwAFAAd0QiEQdwAdwRCIRBwAd0BgMBAAABwRCIRdwAd0RiMRAAAd0QiEQAAAAAAAAAA="), 32, atob("BgAAAAAAAAAAAAAAAAYCAAYGBgYGBgYGBgYCAAAAAAAABgYGBgYG"), 512+9).setFontAlign(0,0);
+g.reset("widget").setFontCustom(atob("AAAAAAAAAAIAAAQCAQAAAd0BgMBdwAAAAAAAdwAB0RiMRcAAAERiMRdwAcAQCAQdwAcERiMRBwAd0RiMRBwAAEAgEAdwAd0RiMRdwAcERiMRdwAFAAd0QiEQdwAdwRCIRBwAd0BgMBAAABwRCIRdwAd0RiMRAAAd0QiEQAAAAAAAAAA="), 32, atob("BgAAAAAAAAAAAAAAAAYCAAYGBgYGBgYGBgYCAAAAAAAABgYGBgYG"), 512+9).setFontAlign(0,0);
   var time = require("locale").time(new Date(),1).split(":");
   time[0] = time[0][0] === " " ? "0" + time[0][1] : time[0];
   time = time[0] + ":" + time[1];
