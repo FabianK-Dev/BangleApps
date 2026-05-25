@@ -17,6 +17,8 @@ function getSleepData() {
     // 1. Wear Check (Temperatur vs Z-Achse)
     if (settings.wearTemp > 0 && data.temperature && data.temperature < settings.wearTemp) {
       isWorn = false;
+    } else {
+      isWorn = true;
     }
 
     if (!isWorn) {

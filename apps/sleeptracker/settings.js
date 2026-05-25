@@ -19,11 +19,11 @@
     "": { title: /*LANG*/"Sleep Tracker", back: back },
     /*LANG*/"Wear Temp": {
       value: settings.wearTemp, min: 0, max: 40, step: 0.5,
-      format: v => v === 0 ? "Off" : v.toFixed(1) + "°C",
+      format: v => v.toFixed(1) + "°C",
       onchange: v => { settings.wearTemp = v; writeSetting(); }
     },
     /*LANG*/"Light Move <=": {
-      value: settings.lightMoveTh, min: 100, max: 1000, step: 10,
+      value: settings.lightMoveTh, min: 100, max: 1000, step: 1,
       onchange: v => { settings.lightMoveTh = v; writeSetting(); }
     },
     /*LANG*/"Light HRM <=": {
@@ -31,7 +31,7 @@
       onchange: v => { settings.lightHrmTh = v; writeSetting(); }
     },
     /*LANG*/"Deep Move <=": {
-      value: settings.deepMoveTh, min: 10, max: 500, step: 10,
+      value: settings.deepMoveTh, min: 10, max: 500, step: 1,
       onchange: v => { settings.deepMoveTh = v; writeSetting(); }
     },
     /*LANG*/"Deep HRM <=": {
@@ -39,7 +39,7 @@
       onchange: v => { settings.deepHrmTh = v; writeSetting(); }
     },
     /*LANG*/"REM Move <=": {
-      value: settings.remMoveTh, min: 10, max: 500, step: 10,
+      value: settings.remMoveTh, min: 10, max: 500, step: 1,
       onchange: v => { settings.remMoveTh = v; writeSetting(); }
     },
     /*LANG*/"REM HRM >=": {
